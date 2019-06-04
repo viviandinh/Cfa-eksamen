@@ -1,0 +1,334 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body, html {
+	
+  height: 100%;
+  margin: 0;
+	font-family:'Khmer MN', 'Khmer MN Bold';
+
+  
+}
+
+header {
+	background-color:rgba(0,0,0,0.00);
+	width: 100%;
+	
+position: absolute;
+	display:inline-block;
+	
+	z-index: 99999;
+	text-align: center;
+}
+
+
+
+/*NAVBAR + dropdown*/
+#menu{
+background: rgba(0,0,0,0.00);
+color: black;
+height: 40px;
+border-bottom: 2px solid #DDD;
+box-shadow: none;
+border-top: 2px solid #DDD;
+}
+#menu ul,#menu li{
+	margin:0 auto;
+	padding:0 0;
+	list-style:none;
+	text-align: center;
+}
+#menu ul{
+	height:45px;
+	width:1024px;
+}
+#menu li{
+	
+	display:inline-block;
+	position:relative;
+	font:bold 0.9em Arial;
+	text-shadow: 1px 2px 4px #838383;
+}
+#menu a{
+	display: block;
+line-height: 40px;
+padding: 0 14px;
+text-decoration: none;
+color: black;
+	text-align: center;
+}
+
+#menu li:hover > a,#menu li a:hover{
+color: black;
+-webkit-transition: all .1s ease-in-out;
+-moz-transition: all .1s ease-in-out;
+-ms-transition: all .1s ease-in-out;
+-o-transition: all .1s ease-in-out;
+transition: all .1s ease-in-out;
+background: white;
+}
+#menu input{
+	display:none;
+	margin:0 0;padding:0 0;
+	width:80px;height:30px;
+	opacity:0;
+	cursor:pointer;
+}
+#menu label{
+	font:bold 30px Arial;
+	display:none;
+	width:35px;
+	height:36px;
+	line-height:36px;
+	text-align:center;
+}
+#menu label span{
+	font-size:16px;
+	position:absolute;
+	left:35px;
+}
+#menu ul.menus{
+height: auto;
+overflow: hidden;
+width: 170px;
+background: grey;
+position: absolute;
+z-index: 999;
+display: none;
+}
+#menu ul.menus li{
+display: block;
+width: 100%;
+font:normal 0.8em Arial;
+text-transform: none;
+text-shadow: none;
+border-bottom: 2px dashed black;
+}
+#menu ul.menus a{
+color: #FFF;
+line-height: 35px;
+}
+#menu li:hover ul.menus{display:block}
+#menu ul.menus a:hover{
+background: red;
+color: #FFF;
+-webkit-transition: all .1s ease-in-out;
+-moz-transition: all .1s ease-in-out;
+-ms-transition: all .1s ease-in-out;
+-o-transition: all .1s ease-in-out;
+transition: all .1s ease-in-out;
+	
+}
+@media screen and (max-width: 800px){
+#menu{
+	position:relative;
+	}
+#menu ul{
+	background: white;
+	position:absolute;
+	top:100%;
+	right:0;
+	left:0;
+	z-index:3;
+	height:auto;
+	display:none;
+	}
+#menu ul.menus{
+	width:100%;
+	position:static;
+	padding-left:20px
+	}
+#menu li{
+	display:block;
+	float:none;
+	width:auto; 
+	font:normal 0.8em Arial;
+	}
+#menu input,#menu label{
+	position:absolute;
+	top:0;
+	left:0;
+	display:block;
+	}
+#menu input{
+	z-index:4;
+	}
+#menu input:checked + label{
+	color:white;
+	}
+#menu input:checked ~ ul{
+	display:block;
+	width: 380px;
+	}
+}
+
+
+.logo{
+	float: left;
+	padding-left: 10px;
+	width: 5%;
+}
+
+
+
+
+
+
+
+/*BANNER/forside (billedet i header) */
+.banner {
+	background-color: #88857B;
+  height: 100%;
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+		filter: blur(1px);
+  -webkit-filter: blur(1px);
+	transform: skew(0deg, -5deg) translateY(-70px);
+	background-attachment: inherit;
+	
+}
+
+.banner-text h1 {
+
+  text-align: center;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: solid black;
+	font-size: 50px;
+	font-family: "Khmer MN", "Khmer MN bold"
+	
+}
+
+.banner-text p {
+	float: right;
+  position: relative;
+  top: 30%;
+  left: 45%;
+  transform: translate(-170%, -120%);
+  color: solid black;
+	font-size: 30px;
+	font-family: "Khmer MN", "Khmer MN bold"
+}
+.banner-text {
+  animation: fadeIn ease 6s;
+  -webkit-animation: fadeIn ease 6s;
+  -moz-animation: fadeIn ease 5s;
+  -o-animation: fadeIn ease 5s;
+  -ms-animation: fadeIn ease 5s;
+}
+
+@keyframes fadeIn{
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+.pic{
+	width: 40%;
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/*Slut på banner*/
+
+
+.udd{
+	height: 500px;
+}
+
+
+
+
+/*FOOTER*/
+
+
+footer{
+	bottom: 0%;
+	background-color: rgba(163,158,158,1.00);
+    height: 100%;
+  
+    -webkit-filter: blur(0px);
+    
+}
+footer:before {
+ content:"";
+ position:absolute;
+ top:-60px;
+ height:60px;
+ left:0;
+ right:0;
+ background:linear-gradient(to bottom right, transparent 49%,  rgba(163,158,158,1.00)50%);
+}
+
+
+.con, .soc, .gen, .cert{
+	display: inline-flex;
+    margin: 0px 120px;
+}
+
+
+
+
+@media (min-width: 300px) and (max-width: 700px)  {
+	body{
+		
+	}	
+	
+	.logo{
+		margin-left: 50px;
+    width: 40%;
+    margin-top: 68px;
+		
+	}
+	
+	.navpic{
+	vertical-align: middle;
+	}
+	
+
+	/*navigation for mobil slut*/
+}
